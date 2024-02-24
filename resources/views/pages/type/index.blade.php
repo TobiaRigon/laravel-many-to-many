@@ -3,6 +3,8 @@
     <title>Type</title>
 @endsection
 @section('content')
+<a href="/projects" class="btn btn-primary">View Projects</a>
+<a href="/" class="btn btn-primary">Home</a>
 <h1>Type</h1>
 
 <ul>
