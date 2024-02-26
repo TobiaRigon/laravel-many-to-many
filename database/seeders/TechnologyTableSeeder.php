@@ -18,7 +18,7 @@ class TechnologyTableSeeder extends Seeder
     public function run()
     {
         Technology :: factory()
-                    ->count(7)
+                    ->count(50)
                     ->create()
                     ->each(function($technology){
                         $projects = Project :: inRandomOrder()-> limit(3)->get();

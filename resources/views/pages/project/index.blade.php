@@ -11,6 +11,17 @@
     @foreach ($projects as $project)
     <li>
         {{$project -> name}} : {{ $project -> type ->name}}
+        <br>
+        Technologies:
+        <ul>
+            @foreach ($project->technologies as $technology)
+                <li>
+                    {{$technology->name}}
+                </li>
+
+            @endforeach
+            <br>
+        </ul>
     </li>
 
     @endforeach
