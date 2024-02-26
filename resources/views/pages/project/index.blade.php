@@ -6,6 +6,7 @@
 <a href="/" class="btn btn-primary">Home</a>
 <a href="/types" class="btn btn-primary">View Types</a>
 <h1>Projects</h1>
+<a class="btn btn-primary" href="{{route('project.create')}}">CREATE</a>
 
 <ul>
     @foreach ($projects as $project)
