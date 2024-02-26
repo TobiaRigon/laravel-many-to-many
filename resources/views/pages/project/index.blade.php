@@ -11,7 +11,11 @@
 <ul>
     @foreach ($projects as $project)
     <li>
+       <h2>
         {{$project -> name}} : {{ $project -> type ->name}}
+    </h2>
+        <br>
+        <a class="btn btn-primary" href="{{ route('project.edit', $project -> id) }}">EDIT</a>
         <br>
         Technologies:
         <ul>
