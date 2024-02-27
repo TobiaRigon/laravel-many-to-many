@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 use App\Models\Project;
 use App\Models\Type;
@@ -20,6 +21,7 @@ return view('pages.project.index', compact('projects'));
  }
 
 
+
  public function create(){
 
     $types = Type :: all();
@@ -32,11 +34,16 @@ return view('pages.project.index', compact('projects'));
 
     $data = $request -> all();
 
+    $img = $data ['image'];
+    $img_path = Storage :: disk('public')->put('images', $img);
+    // dd($img , $img_path);
+
 
     $type = Type :: find($data['type_id']);
 
     $project = new Project();
     $project -> name = $data['name'];
+
 
 
     $project -> type() -> associate($type);

@@ -13,8 +13,9 @@
     <li>
        <h2>
         {{$project -> name}} : {{ $project -> type ->name}}
-    </h2>
+        </h2>
         <br>
+        <img src="{{asset('storage/' . $project -> image)}}" width='200px' alt="X">
         <a class="btn btn-primary" href="{{ route('project.edit', $project -> id) }}">EDIT</a>
         <br>
         Technologies:

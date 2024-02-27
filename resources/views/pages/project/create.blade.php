@@ -8,10 +8,14 @@
 <a href="/projects" class="btn btn-primary">View Project</a>
 <h1>New Projects</h1>
 
-<form method="POST">
+<form
+method="POST"
+enctype='multipart/form-data'
+>
 
     @csrf
     @method("POST")
+
 
     <label for="name">Name</label>
     <input type="text" name="name" id="name">
@@ -26,6 +30,8 @@
         @endforeach
     </select>
     <br>
+    <label for="image">Image</label>
+    <input type="file" name="image" id="image">
     @foreach ($technologies as $technology)
         <div>
             <input

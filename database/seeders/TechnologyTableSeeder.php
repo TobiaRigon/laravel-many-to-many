@@ -23,7 +23,7 @@ class TechnologyTableSeeder extends Seeder
                     ->each(function($technology){
                         $projects = Project :: inRandomOrder()-> limit(3)->get();
 
-                        dd($projects);
+                        // dd($projects);
 
                         $technology -> projects()-> attach($projects);
                         $technology -> save();
