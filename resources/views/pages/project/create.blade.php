@@ -31,7 +31,7 @@ enctype='multipart/form-data'
     </select>
     <br>
     <label for="image">Image</label>
-    <input type="file" name="image" id="image">
+    <input type="file" name="image" id="image" accept="image/*">
     @foreach ($technologies as $technology)
         <div>
             <input

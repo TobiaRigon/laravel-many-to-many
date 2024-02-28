@@ -43,6 +43,7 @@ return view('pages.project.index', compact('projects'));
 
     $project = new Project();
     $project -> name = $data['name'];
+    $project -> image = $img_path;
 
 
 
